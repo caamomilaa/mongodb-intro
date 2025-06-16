@@ -6,7 +6,12 @@ const userRoutes = require('./routes/users.routes');
 
 require('dotenv').config(); //permite leer el archivo .env. SI NO EXISE ESTA LINEA, NO PODEMOS ACCEDER AL ARCHIVO ENV.
 
-const port = process.env.PORT; //báscamente es un procésame estavariable de entoro. Se llama PORT, porque lo hemos decidido.
+//IMPORTANTE METER EN GITIGNORE EL ARCHIVO ENV
+
+const port = process.env.PORT; //de esta manera accedemos a lasvariables de entorno => procésame esta variable de entorno. Se llama '.PORT', porquese ha decidido así en el archivo .env
+
+// ?) Por qué lo ponemos aquí y no dentro del app.listen, como aparece en los apuntes?
+
 
 const corsOptions = {
   origin: '*', // Orígenes permitidos (cuando esté en un dominio real, lo cambiaremos por ese dominio)
